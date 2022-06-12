@@ -34,6 +34,8 @@ const CostForm = (props)=>{
 		setInputDate("")
 	}
 
+
+
 	return (
 		<form onSubmit={submitHandler}>
 			<div className="new-cost__controls">
@@ -50,7 +52,8 @@ const CostForm = (props)=>{
 					<input type='date' min='2019-01-01' step='2022-12-31' value={inputDate} onChange={dateChangeHandler} />
 				</div>
 				<div className="new-cost__actions">
-					<button type="submit" >Добавить расход</button>
+					<button type="submit">Добавить расход</button>
+					<button type="button" onClick={props.onCancel}>Отмена</button>
 				</div>
 			</div>
 		</form>
